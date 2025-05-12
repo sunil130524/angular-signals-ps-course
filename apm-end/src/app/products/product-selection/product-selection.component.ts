@@ -53,6 +53,10 @@ export class ProductSelectionComponent {
 
   onIncrease() {
     this.quantity.update(q => q + 1);
+    // To see how the effect is scheduled
+    // this.quantity.set(2);
+    // this.quantity.set(42);
+    // this.quantity.set(12);
   }
 
 }
