@@ -22,6 +22,9 @@ export class ProductSelectionComponent {
     computation: p => 1
   });
 
+  // If calling a method in the service to create the resource
+  // productsResource = this.productService.createProducts();
+
   // Reference the signals in the service to simplify the template code
   products = this.productService.productsResource.value;
   isLoading = this.productService.productsResource.isLoading;
