@@ -49,6 +49,8 @@ export class ProductSelectionComponent {
   qtyEffect = effect(() => console.log('quantity', this.quantity()));
   selEffect = effect(() => console.log('selected product:', this.selectedProduct()?.productName));
   prodEff = effect(() => console.log('products:', JSON.stringify(this.products())));
+  statusEff = effect(() => console.log('request status', this.productService.productsResource.status));
+  status2Eff = effect(() => console.log('status code', this.productService.productsResource.statusCode));
 
   onDecrease() {
     this.quantity.update(q => q <= 0 ? 0 : q - 1);
