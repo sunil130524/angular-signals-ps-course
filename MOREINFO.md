@@ -1,5 +1,7 @@
 # Links to More Information
 
+Here are clickable links to more information about signals.
+
 ## Module 1: The What and Why of Signals
 [Backstory of signals and zone.js](https://youtu.be/YHZkiUbbeOg)
 
