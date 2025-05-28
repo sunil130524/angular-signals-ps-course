@@ -4,11 +4,9 @@ import { ProductSelection } from './products/product-selection/product-selection
 @Component({
   selector: 'app-root',
   imports: [ProductSelection],
-  template: `
-    <app-product-selection/>
-  `,
+  templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  title = 'Acme Product Management';
+  protected title = 'Acme Product Management';
 }
