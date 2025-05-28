@@ -25,16 +25,13 @@ export class ProductSelection {
   // If calling a method in the service to create the resource
   // productsResource = this.productService.createProducts();
 
-  // Reference the signals in the service to simplify the template code
+  // Reference the resource properties to simplify the code
   products = this.productService.productsResource.value;
   isLoading = this.productService.productsResource.isLoading;
   error = this.productService.productsResource.error;
-  errorMessage = computed(() => 
-      this.error() ? `${this.error()?.message}` : ''
+  errorMessage = computed(() =>
+    this.error() ? `${this.error()?.message}` : ''
   );
-  fx = effect(() => console.log(this.error()));
-  fx1 = effect(() => console.log(this.error()?.name));
-  fx2 = effect(() => console.log(this.error()?.cause));
 
   // If using a method in the service:
   // productsResource = this.productService.createProducts()
@@ -47,8 +44,14 @@ export class ProductSelection {
 
   qtyEffect = effect(() => console.log('quantity', this.quantity()));
   selEffect = effect(() => console.log('selected product:', this.selectedProduct()?.productName));
-  // Generates an error if the resource returns an error
-  // prodEff = effect(() => console.log('products:', JSON.stringify(this.products())));
+  // Accessing the resource generates an error if the http request fails
+  prodEff = effect(() => {
+    if (!this.error()) {
+      console.log('Products', JSON.stringify(this.products()));
+    } else {
+      console.error('Failed to load products', this.error());
+    }
+  });
   statusEff = effect(() => console.log('request status:', this.productService.productsResource.status()));
 
   onDecrease() {
