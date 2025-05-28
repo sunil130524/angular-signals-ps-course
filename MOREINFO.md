@@ -11,7 +11,7 @@ Here are clickable links to more information about signals.
 
 ## Module 2: Creating and Reading Signals
 
-[Introduction to Git and GitHub](https://youtu.be/pICJdbC7j0Q) - If you are new to GitHub and want to download these project files or use Git and GitHub for your projects
+[Introduction to Git and GitHub](https://youtu.be/pICJdbC7j0Q) - If you are new to GitHub and want info on how to download these project files or use Git and GitHub for your projects
 
 [Angular's New Template Syntax: Control Flow](https://youtu.be/j9VTGRGyE-o) - For more information on the new template block syntax
 
