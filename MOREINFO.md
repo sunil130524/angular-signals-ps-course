@@ -2,6 +2,9 @@
 
 Here are clickable links to more information about signals.
 
+## General
+[Introduction to Git and GitHub](https://youtu.be/pICJdbC7j0Q) - If you are new to GitHub and want info on how to download these project files or use Git and GitHub for your projects
+
 ## Module 1: The What and Why of Signals
 [Backstory of signals and zone.js](https://youtu.be/YHZkiUbbeOg)
 
@@ -10,8 +13,6 @@ Here are clickable links to more information about signals.
 [Angular signal documentation](https://angular.dev/guide/signals) - Official Angular documentation on signals
 
 ## Module 2: Creating and Reading Signals
-
-[Introduction to Git and GitHub](https://youtu.be/pICJdbC7j0Q) - If you are new to GitHub and want to download these project files or use Git and GitHub for your projects
 
 [Angular's New Template Syntax: Control Flow](https://youtu.be/j9VTGRGyE-o) - For more information on the new template block syntax
 
