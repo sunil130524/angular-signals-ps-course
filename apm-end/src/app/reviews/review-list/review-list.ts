@@ -7,7 +7,7 @@ import { ReviewService } from '../review.service';
   templateUrl: './review-list.html',
   styleUrl: './review-list.css'
 })
-export class ReviewListComponent {
+export class ReviewList {
   private reviewService = inject(ReviewService);
 
   reviews = this.reviewService.reviewsResource.value;

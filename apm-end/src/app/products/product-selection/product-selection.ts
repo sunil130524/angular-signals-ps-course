@@ -3,15 +3,15 @@ import { FormsModule } from '@angular/forms';
 import { ProductService } from '../product.service';
 import { CurrencyPipe } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ReviewListComponent } from '../../reviews/review-list/review-list';
+import { ReviewList } from '../../reviews/review-list/review-list';
 
 @Component({
   selector: 'app-product-selection',
-  imports: [FormsModule, CurrencyPipe, ReviewListComponent],
+  imports: [FormsModule, CurrencyPipe, ReviewList],
   templateUrl: './product-selection.html',
   styleUrl: './product-selection.css'
 })
-export class ProductSelectionComponent {
+export class ProductSelection {
   pageTitle = 'Product Selection'
   private productService = inject(ProductService);
 
