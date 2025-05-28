@@ -4,8 +4,8 @@ import { ReviewService } from '../review.service';
 @Component({
   selector: 'app-review-list',
   imports: [],
-  templateUrl: './review-list.component.html',
-  styleUrl: './review-list.component.css'
+  templateUrl: './review-list.html',
+  styleUrl: './review-list.css'
 })
 export class ReviewListComponent {
   private reviewService = inject(ReviewService);

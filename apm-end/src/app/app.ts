@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductSelectionComponent } from './products/product-selection/product-selection.component';
+import { ProductSelectionComponent } from './products/product-selection/product-selection';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { ProductSelectionComponent } from './products/product-selection/product-
   template: `
     <app-product-selection/>
   `,
-  styleUrl: './app.component.css'
+  styleUrl: './app.css'
 })
 export class AppComponent {
   title = 'Acme Product Management';
