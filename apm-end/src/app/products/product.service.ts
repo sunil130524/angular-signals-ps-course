@@ -6,7 +6,7 @@ import { httpResource } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'api/products';
+  private productsUrl = 'api/product';
 
     // Signals to support the template
     selectedProduct = signal<Product | undefined>(undefined);

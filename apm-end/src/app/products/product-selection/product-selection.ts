@@ -29,13 +29,9 @@ export class ProductSelection {
   products = this.productService.productsResource.value;
   isLoading = this.productService.productsResource.isLoading;
   error = this.productService.productsResource.error;
-  errorMessage = computed(() => {
-    const err = this.error() as HttpErrorResponse;
-    if (err) {
-      return `${err.status} - ${err.statusText}: ${err.url}`
-    }
-    return '';
-  });
+  errorMessage = computed(() => 
+      this.error() ? `${this.error()?.message}` : ''
+  );
 
   // If using a method in the service:
   // productsResource = this.productService.createProducts()
