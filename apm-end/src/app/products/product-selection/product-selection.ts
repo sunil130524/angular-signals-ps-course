@@ -32,6 +32,9 @@ export class ProductSelection {
   errorMessage = computed(() => 
       this.error() ? `${this.error()?.message}` : ''
   );
+  fx = effect(() => console.log(this.error()));
+  fx1 = effect(() => console.log(this.error()?.name));
+  fx2 = effect(() => console.log(this.error()?.cause));
 
   // If using a method in the service:
   // productsResource = this.productService.createProducts()
@@ -44,7 +47,8 @@ export class ProductSelection {
 
   qtyEffect = effect(() => console.log('quantity', this.quantity()));
   selEffect = effect(() => console.log('selected product:', this.selectedProduct()?.productName));
-  prodEff = effect(() => console.log('products:', JSON.stringify(this.products())));
+  // Generates an error if the resource returns an error
+  // prodEff = effect(() => console.log('products:', JSON.stringify(this.products())));
   statusEff = effect(() => console.log('request status:', this.productService.productsResource.status()));
 
   onDecrease() {
