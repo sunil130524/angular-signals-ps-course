@@ -8,5 +8,5 @@ import { ProductSelection } from './products/product-selection/product-selection
   styleUrl: './app.css'
 })
 export class App {
-  title = 'Acme Product Management';
+  protected title = 'Acme Product Management';
 }
