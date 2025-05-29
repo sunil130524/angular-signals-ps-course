@@ -1,7 +1,7 @@
-import { httpResource } from '@angular/common/http';
 import { effect, inject, Injectable } from '@angular/core';
-import { Review } from './review';
 import { ProductService } from '../products/product.service';
+import { httpResource } from '@angular/common/http';
+import { Review } from './review';
 
 @Injectable({
   providedIn: 'root'
@@ -19,23 +19,23 @@ export class ReviewService {
   // );
 
   // Prevent retrieval if there is no selected product.
-  // reviewsResource = httpResource<Review[]>(() => {
-  //   const p = this.productService.selectedProduct();
-  //   if (p) {
-  //     return `${this.reviewsUrl}?productId=^${p.id}$`;
-  //   } else {
-  //     return undefined;
-  //   }
-  // },
-  //   { defaultValue: [] }
-  // );
-
-  // A shorter way to write the above code using a ternary operator
-  reviewsResource = httpResource<Review[]>(() => 
-    this.productService.selectedProduct() ? 
-      `${this.reviewsUrl}?productId=^${this.productService.selectedProduct()?.id}$` : undefined,
+  reviewsResource = httpResource<Review[]>(() => {
+    const p = this.productService.selectedProduct();
+    if (p) {
+      return `${this.reviewsUrl}?productId=^${p.id}$`;
+    } else {
+      return undefined;
+    }
+  },
     { defaultValue: [] }
   );
+
+  // A shorter way to write the above code using a ternary operator
+  // reviewsResource = httpResource<Review[]>(() => 
+  //   this.productService.selectedProduct() ? 
+  //     `${this.reviewsUrl}?productId=^${this.productService.selectedProduct()?.id}$` : undefined,
+  //   { defaultValue: [] }
+  // );
 
   // Use the options object
   // reviewsResource = httpResource<Review[]>(() => ({
@@ -52,22 +52,25 @@ export class ReviewService {
   // Use the options object
   // Prevent retrieval if there is no selected product
   // reviewsResource = httpResource<Review[]>(() => {
-  //   const selectedProduct = this.productService.selectedProduct();
-  //   if (!selectedProduct) {
+  //   const p = this.productService.selectedProduct();
+  //   if (p) {
+  //     return {
+  //       url: this.reviewsUrl,
+  //       method: 'GET',
+  //       headers: {
+  //         accept: 'application/json'
+  //       },
+  //       params: {
+  //         productId: `^${p.id}$`
+  //       }
+  //     }
+  //   } else {
   //     return undefined;
   //   }
-  //   return {
-  //     url: this.reviewsUrl,
-  //     method: 'GET',
-  //     headers: {
-  //       accept: 'application/json'
-  //     },
-  //     params: {
-  //       productId: `^${selectedProduct.id}$`
-  //     }
-  //   }
-  // });
+  // },
+  //   { defaultValue: [] }
+  // );
 
-  // Display the reviews
+  // Log out when reviews are loading
   eff = effect(() => console.log('loading reviews', this.reviewsResource.isLoading()));
 }

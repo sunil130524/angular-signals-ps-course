@@ -1,8 +1,7 @@
 import { Component, computed, effect, inject, linkedSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ProductService } from '../product.service';
 import { CurrencyPipe } from '@angular/common';
-import { HttpErrorResponse } from '@angular/common/http';
+import { ProductService } from '../product.service';
 import { ReviewList } from '../../reviews/review-list/review-list';
 
 @Component({
@@ -29,18 +28,26 @@ export class ProductSelection {
   products = this.productService.productsResource.value;
   isLoading = this.productService.productsResource.isLoading;
   error = this.productService.productsResource.error;
-  errorMessage = computed(() =>
-    this.error() ? `${this.error()?.message}` : ''
-  );
+  errorMessage = computed(() => this.error() ? this.error()?.message : '');
 
   // If using a method in the service:
   // productsResource = this.productService.createProducts()
   // products = this.productsResource.value;
 
   // React to changes and recompute
-  total = computed(() =>
-    (this.selectedProduct()?.price ?? 0) * this.quantity());
+  total = computed(() => (this.selectedProduct()?.price ?? 0) * this.quantity());
   color = computed(() => this.total() > 200 ? 'green' : 'blue');
+
+  onDecrease() {
+    this.quantity.update(q => q <= 0 ? 0 : q - 1);
+  }
+  onIncrease() {
+    this.quantity.update(q => q + 1);
+    // To see how the effect is scheduled
+    // this.quantity.set(2);
+    // this.quantity.set(42);
+    // this.quantity.set(12);
+  }
 
   qtyEffect = effect(() => console.log('quantity', this.quantity()));
   selEffect = effect(() => console.log('selected product:', this.selectedProduct()?.productName));
@@ -54,16 +61,5 @@ export class ProductSelection {
   });
   statusEff = effect(() => console.log('request status:', this.productService.productsResource.status()));
 
-  onDecrease() {
-    this.quantity.update(q => q <= 0 ? 0 : q - 1);
-  }
-
-  onIncrease() {
-    this.quantity.update(q => q + 1);
-    // To see how the effect is scheduled
-    // this.quantity.set(2);
-    // this.quantity.set(42);
-    // this.quantity.set(12);
-  }
 
 }

@@ -1,29 +1,29 @@
+import { httpResource } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
 import { Product } from './product';
-import { httpResource } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'api/product';
+  private productsUrl = 'api/products';
 
-    // Signals to support the template
-    selectedProduct = signal<Product | undefined>(undefined);
-  
-    // Retrieve data into a signal
-    productsResource = httpResource<Product[]>(() => this.productsUrl, {defaultValue: []});
+  // Signals to support the template
+  selectedProduct = signal<Product | undefined>(undefined);
 
-    // Using a method moves the management and lifetime of the resource to the component
-    // createProducts() {
-    //   return httpResource<Product[]>(() => this.productsUrl, {defaultValue: []});
-    // }
+  // Retrieve data into a signal
+  productsResource = httpResource<Product[]>(() => this.productsUrl, { defaultValue: [] });
 
-    // Don't get the product data until something happens
-    // Set this signal when that something happens
-    // getProductsNow = signal(false);
-    // productsResource = httpResource<Product[]>(()=> 
-    //   this.getProductsNow() ? this.productsUrl : undefined, 
-    //   { defaultValue: []});
+  // Using a method moves the management and lifetime of the resource to the component
+  // createProducts() {
+  //   return httpResource<Product[]>(() => this.productsUrl, {defaultValue: []});
+  // }
 
-  }
+  // To wait to get the product data until something happens
+  // Set this signal when that something happens
+  // getProductsNow = signal(false);
+  // productsResource = httpResource<Product[]>(()=> 
+  //   this.getProductsNow() ? this.productsUrl : undefined, 
+  //   { defaultValue: []});
+
+}
