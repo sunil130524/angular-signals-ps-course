@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './product-selection.css'
 })
 export class ProductSelection {
-  pageTitle = 'Product Selection'
+  pageTitle = 'Product Selection';
 
 }

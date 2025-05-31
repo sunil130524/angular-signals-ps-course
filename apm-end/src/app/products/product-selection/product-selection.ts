@@ -11,7 +11,7 @@ import { ReviewList } from '../../reviews/review-list/review-list';
   styleUrl: './product-selection.css'
 })
 export class ProductSelection {
-  pageTitle = 'Product Selection'
+  pageTitle = 'Product Selection';
   private productService = inject(ProductService);
 
   // Signals used by the template
