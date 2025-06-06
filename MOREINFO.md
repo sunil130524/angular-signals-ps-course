@@ -36,7 +36,7 @@ Here are clickable links to more information about signals.
 
 [Building a shopping cart using `computed()` signals](https://youtu.be/kczkl2HndJg)
 
-[Additional `linkedSignal()` examples, including how to use the source property to specify multiple dependent signals](https://youtu.be/hFR3gVIY9gM)
+[First Look at Angular's new linkedSignal()](https://youtu.be/hFR3gVIY9gM) - Additional `linkedSignal()` examples, including how to use the source property to specify multiple dependent signals
 
 [Angular documentation for computed()](https://angular.dev/guide/signals#computed-signals)
 
@@ -44,17 +44,20 @@ Here are clickable links to more information about signals.
 
 ## Module 4: Retrieving Data into a Signal
 
-[For more information on the Resource API, start with this video on why we need a new API to retrieve data](https://youtu.be/YHZkiUbbeOg)
+[resource(), rxResource(), httpResource(): Why????](https://youtu.be/YHZkiUbbeOg) - For more information on the Resource API, start with this video on why we need a new API to retrieve data
 
-[resource and rxResource](https://youtu.be/_KyCmpMlVTc)
+[httpResource(): First Look](https://youtu.be/DefmIyp3Uho)
 
-[Additional error handling examples, specifically using rxResource](https://youtu.be/T7DPGCSmQes)
+[First Look at Angular's new resource() and rxResource()](https://youtu.be/_KyCmpMlVTc)
+
+[Return httpResource() from a Method](https://youtu.be/4VhiNK_9QIY) 
+
+[Signals in a Service or a Component?](https://youtu.be/xtxBMcEMcxU)
+
+[Error Handling with rxResource](https://youtu.be/T7DPGCSmQes) - Error handling example (this uses rxResource, but the techniques are similar for httpResource)
 
 ## Module 5: Retrieving Data Reactively
 
+[Debouncing with the Resource API](https://youtu.be/5A1I6rpe8UA) - When implementing a search feature, we don't want to issue an http request for each character the user types.
 
-
-
-
-
-
+[Stale data? Refresh it!](https://youtu.be/sY4ofhfQ_pk) - Using the Resource API refresh feature
