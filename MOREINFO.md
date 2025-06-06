@@ -14,6 +14,12 @@ Here are clickable links to more information about signals.
 
 ## Module 2: Creating and Reading Signals
 
+[Building a signals-based application from scratch](https://youtu.be/LHgJP7MwTWY)
+
+[Working with Arrays in Angular Signals](https://youtu.be/wcn_8UnYBEw)
+
+[JavaScript Functions](https://youtu.be/j8oAbRAlcyE) - For more information on arrow functions in JavaScript
+
 [Angular's New Template Syntax: Control Flow](https://youtu.be/j9VTGRGyE-o) - For more information on the new template block syntax
 
 [Angular's New `@for` Block Features](https://youtu.be/ooHPDCLMyXs)
@@ -21,12 +27,6 @@ Here are clickable links to more information about signals.
 [Declare Variables in Templates: Angular's New `@let` Declaration](https://youtu.be/tIi9304sjEI)
 
 [Automatically Migrate to Angular's New Control Flow Template Syntax](https://youtu.be/fkAFHMhjJsQ)
-
-[Building a signals-based application from scratch](https://youtu.be/LHgJP7MwTWY)
-
-[Working with Arrays in Angular Signals](https://youtu.be/wcn_8UnYBEw)
-
-[JavaScript Functions](https://youtu.be/j8oAbRAlcyE) - For more information on arrow functions in JavaScript
 
 [Angular guidance on signal `effect`](https://angular.dev/guide/signals#effects) - Official Angular documentation
 
