@@ -32,6 +32,8 @@ Here are clickable links to more information about signals.
 
 [When Should We (NOT) Use a Signal `effect`](https://youtu.be/XWz8pxQWD8c) - Alternatives to using a signal `effect`
 
+[Angular Injection Context Explained](https://youtu.be/rsLW9znsp4E) - An effect runs within the injection context, explained in this video
+
 ## Module 3: Creating Reactive Signals with computed() and linkedSignal()
 
 [Building a shopping cart using `computed()` signals](https://youtu.be/kczkl2HndJg)
