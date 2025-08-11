@@ -1,5 +1,5 @@
 # angular-signals-ps-course
-Code for the sample application used in my Pluralsight course: "Angular: Signals"
+Code for the sample application used in my Pluralsight course: "Angular: Signals": https://www.pluralsight.com/library/courses/angular-signals
 
 To use this code:
 - Download the project
